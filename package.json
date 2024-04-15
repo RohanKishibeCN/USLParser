@@ -1,0 +1,57 @@
+{
+  "name": "@usl/usl-js",
+  "version": "0.0.02",
+  "description": "A USL Javascript parser for use as NodeJs module or in-browser.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:usl-org/usl.tooling.parsers.usl-js.git"
+  },
+  "main": "./lib/usl.js",
+  "bin": {
+    "usl-js": "bin/usl-js"
+  },
+  "license": "Apache-2.0",
+  "browser": {
+    "got": false
+  },
+  "dependencies": {
+    "got": "~2.4.0",
+    "jju": "~1.2.0",
+    "json-schema-ref-parser": "^3.1.2",
+    "object-assign": "^4.1.0",
+    "pluralize": "~1.1.1",
+    "q": "0.9.7",
+    "uritemplate": "~0.3.4"
+  },
+  "devDependencies": {
+    "browserify": "~12.0.1",
+    "chai": "~1.8.1",
+    "chai-as-promised": "~4.1.0",
+    "coffeeify": "~0.5.2",
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.11",
+    "grunt-coffeelint": "~0.0.7",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-mocha-cli": "~1.3.0",
+    "grunt-mocha-phantomjs": "~3.0.0",
+    "grunt-shell": "~0.6.4",
+    "load-grunt-tasks": "~0.3.0",
+    "mocha": "~1.14.0",
+    "mversion": "~1.10.1",
+    "pre-commit": "~1.0.6"
+  },
+  "scripts": {
+    "build": "grunt build",
+    "mversion": "mversion",
+    "stage-build": "git add lib && git add dist",
+    "test": "grunt test"
+  },
+  "pre-commit": [
+    "test",
+    "build",
+    "stage-build"
+  ]
+}

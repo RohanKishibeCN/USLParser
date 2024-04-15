@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var resolve = require('path').resolve;
+var usl = require('../');
+
+var filename = process.argv[2];
+
+if (!filename) {
+  console.error('No filename specified');
+  console.error('Usage: `usl-js api.usl`');
+
+  process.exit(1);
+}
+
+usl.loadFile(resolve(process.cwd(), filename))
+  .then(function (usl) {
+    console.log(JSON.stringify(usl));
+  })
+  .catch(function (err) {
+    console.error(err.toString());
+
+    process.exit(1);
+  });

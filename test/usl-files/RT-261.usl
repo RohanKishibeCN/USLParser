@@ -1,0 +1,7 @@
+#%USL 0.1
+---
+title: Title
+baseUri: http://follow.me/{there}
+baseUriParameters:
+    there:
+        description: !include RT-261.usl
