@@ -6,7 +6,7 @@
 A JavaScript parser for [USL](http://usl.io).
 
 ### Contributing
-If you are interested in contributing some code to this project, thanks! - Watch this space :-)
+If you are interested in contributing codes to this project, thanks! - Watch this space :-)
 
 To discuss this project, please use its [github issues](https://github.com/usl-org/usl.tooling.parsers.usl-js/issues).
 
